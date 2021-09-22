@@ -108,7 +108,7 @@ OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
 ---
 ### Just for me:
 ```bash
-set JDK_VERSION=OpenJDK_v.11\openjdk-11.0.1.9
+set JDK_VERSION=OpenJDK_v.11
 ```
 ```bash
 set JAVA_HOME=%HOMEDRIVE%%HOMEPATH%\OneDrive\Desctop\001_PROJECTS_\001_Java_Projects_\#_HOMEWORKS_\#_JavaEnterprise_\env\%JDK_VERSION%
