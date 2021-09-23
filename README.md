@@ -106,25 +106,28 @@ OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
 ```
 
 ---
-### Just for me:
+### Just for me (CMD):
 ```bash
-set JDK_VERSION=OpenJDK_v.11
-```
-```bash
-set JAVA_HOME=%HOMEDRIVE%%HOMEPATH%\OneDrive\Desctop\001_PROJECTS_\001_Java_Projects_\#_HOMEWORKS_\#_JavaEnterprise_\env\%JDK_VERSION%
-```
-```bash
+set JDK_VERSION=openJDK_v.11
+set MAVEN_VERSION=maven_v.3.6.3
+set JAVA_HOME=%USERPROFILE%\OneDrive\Desctop\001_PROJECTS_\001_Java_Projects_\#_HOMEWORKS_\#_JavaEnterprise_\env\%JDK_VERSION%
+set MAVEN_HOME=%USERPROFILE%\OneDrive\Desctop\001_PROJECTS_\001_Java_Projects_\#_HOMEWORKS_\#_JavaEnterprise_\env\%MAVEN_VERSION%
 set PATH=%PATH%;%JAVA_HOME%\bin
+set PATH=%PATH%;%MAVEN_HOME%\bin
+java -version
+mvn --version
 ```
 
+### Just for me (PWSH):
 ```bash
-set MAVEN_VERSION=maven_v.3.6.3
-```
-```bash
-set MAVEN_HOME=%HOMEDRIVE%%HOMEPATH%\OneDrive\Desctop\001_PROJECTS_\001_Java_Projects_\#_HOMEWORKS_\#_JavaEnterprise_\env\%MAVEN_VERSION%
-```
-```bash
-set PATH=%PATH%;%MAVEN_HOME%\bin
+$env:JDK_VERSION="openJDK_v.11"
+$env:MAVEN_VERSION="maven_v.3.6.3"
+$env:JAVA_HOME="$env:USERPROFILE\OneDrive\Desctop\001_PROJECTS_\001_Java_Projects_\#_HOMEWORKS_\#_JavaEnterprise_\env\$env:JDK_VERSION"
+$env:MAVEN_HOME="$env:USERPROFILE\OneDrive\Desctop\001_PROJECTS_\001_Java_Projects_\#_HOMEWORKS_\#_JavaEnterprise_\env\$env:MAVEN_VERSION"
+$env:PATH="$env:PATH;$env:JAVA_HOME\bin"
+$env:PATH="$env:PATH;$env:MAVEN_HOME\bin"
+java -version
+mvn --version
 ```
 
 ---
