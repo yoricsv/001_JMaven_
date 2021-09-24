@@ -75,24 +75,35 @@ echo %JAVA_HOME%
 
 4. Add the path to JDK `\bin` folder to `PATH` and repeat the step 2. In other, go to step 5.
 
-### For Enterprise course:
+### For Enterprise course (CMD):
 ```bash
 set JAVA_HOME=D:\java\OpenJDK_v.11\openjdk-11.0.1.9
-```
-```bash
 set PATH=%PATH%;%JAVA_HOME%\bin
+java -version
+```
+
+### For Enterprise course (PWSH):
+```bash
+$env:JAVA_HOME="D:\java\OpenJDK_v.11\openjdk-11.0.1.9"
+$env:PATH="$env:PATH;$env:JAVA_HOME\bin"
+java -version
 ```
 
 > ***NOTE***: Use the `/M` switch to make the setx command once to permanently create the system variable.
 
 5. Add the Maven `\bin` directory to `PATH`
 
-### For Enterprise course:
+### For Enterprise course (CMD):
 ```bash
 set MAVEN_HOME=D:\java\maven_v.3.6.3
-```
-```bash
 set PATH=%PATH%;%MAVEN_HOME%\bin
+```
+
+### For Enterprise course (PWSH):
+```bash
+$env:MAVEN_HOME="D:\java\maven_v.3.6.3"
+$env:PATH="$env:PATH;$env:MAVEN_HOME\bin"
+mvn -v
 ```
 
 6. Confirm with `mvn -v` in a new shell. The result should look similar to:
@@ -115,7 +126,7 @@ set MAVEN_HOME=%USERPROFILE%\OneDrive\Desctop\001_PROJECTS_\001_Java_Projects_\e
 set PATH=%PATH%;%JAVA_HOME%\bin
 set PATH=%PATH%;%MAVEN_HOME%\bin
 java -version
-mvn --version
+mvn -v
 ```
 
 ### Just for me (PWSH):
