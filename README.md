@@ -75,56 +75,70 @@ echo %JAVA_HOME%
 
 4. Add the path to JDK `\bin` folder to `PATH` and repeat the step 2. In other, go to step 5.
 
-### For Enterprise course:
+### For Enterprise course (CMD):
 ```bash
 set JAVA_HOME=D:\java\OpenJDK_v.11\openjdk-11.0.1.9
-```
-```bash
 set PATH=%PATH%;%JAVA_HOME%\bin
+java -version
+```
+
+### For Enterprise course (PWSH):
+```bash
+$env:JAVA_HOME="D:\java\OpenJDK_v.11\openjdk-11.0.1.9"
+$env:PATH="$env:PATH;$env:JAVA_HOME\bin"
+java -version
 ```
 
 > ***NOTE***: Use the `/M` switch to make the setx command once to permanently create the system variable.
 
 5. Add the Maven `\bin` directory to `PATH`
 
-### For Enterprise course:
+### For Enterprise course (CMD):
 ```bash
 set MAVEN_HOME=D:\java\maven_v.3.6.3
-```
-```bash
 set PATH=%PATH%;%MAVEN_HOME%\bin
+```
+
+### For Enterprise course (PWSH):
+```bash
+$env:MAVEN_HOME="D:\java\maven_v.3.6.3"
+$env:PATH="$env:PATH;$env:MAVEN_HOME\bin"
+mvn -v
 ```
 
 6. Confirm with `mvn -v` in a new shell. The result should look similar to:
 
 ```bash
 Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
-Maven home: C:\Users\Yoric\OneDrive\Desctop\001_PROJECTS_\001_Java_Projects_\#_HOMEWORKS_\#_JavaEnterprise_\env\maven_v.3.6.3\bin\..
+Maven home: C:\Users\Yoric\OneDrive\Desctop\001_PROJECTS_\001_Java_Projects_\env\maven_v.3.6.3\bin\..
 Java version: 15.0.1, vendor: AdoptOpenJDK, runtime: C:\Program Files\AdoptOpenJDK\jdk-15.0.1.9-hotspot
 Default locale: en_US, platform encoding: Cp1252
 OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
 ```
 
 ---
-### Just for me:
+### Just for me (CMD):
 ```bash
-set JDK_VERSION=OpenJDK_v.11
-```
-```bash
-set JAVA_HOME=%HOMEDRIVE%%HOMEPATH%\OneDrive\Desctop\001_PROJECTS_\001_Java_Projects_\#_HOMEWORKS_\#_JavaEnterprise_\env\%JDK_VERSION%
-```
-```bash
+set JDK_VERSION=openJDK_v.11
+set MAVEN_VERSION=maven_v.3.6.3
+set JAVA_HOME=%USERPROFILE%\OneDrive\Desctop\001_PROJECTS_\001_Java_Projects_\env\%JDK_VERSION%
+set MAVEN_HOME=%USERPROFILE%\OneDrive\Desctop\001_PROJECTS_\001_Java_Projects_\env\%MAVEN_VERSION%
 set PATH=%PATH%;%JAVA_HOME%\bin
+set PATH=%PATH%;%MAVEN_HOME%\bin
+java -version
+mvn -v
 ```
 
+### Just for me (PWSH):
 ```bash
-set MAVEN_VERSION=maven_v.3.6.3
-```
-```bash
-set MAVEN_HOME=%HOMEDRIVE%%HOMEPATH%\OneDrive\Desctop\001_PROJECTS_\001_Java_Projects_\#_HOMEWORKS_\#_JavaEnterprise_\env\%MAVEN_VERSION%
-```
-```bash
-set PATH=%PATH%;%MAVEN_HOME%\bin
+$env:JDK_VERSION="openJDK_v.11"
+$env:MAVEN_VERSION="maven_v.3.6.3"
+$env:JAVA_HOME="$env:USERPROFILE\OneDrive\Desctop\001_PROJECTS_\001_Java_Projects_\env\$env:JDK_VERSION"
+$env:MAVEN_HOME="$env:USERPROFILE\OneDrive\Desctop\001_PROJECTS_\001_Java_Projects_\env\$env:MAVEN_VERSION"
+$env:PATH="$env:PATH;$env:JAVA_HOME\bin"
+$env:PATH="$env:PATH;$env:MAVEN_HOME\bin"
+java -version
+mvn --version
 ```
 
 ---
