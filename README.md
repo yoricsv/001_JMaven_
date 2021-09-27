@@ -119,27 +119,67 @@ OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
 ---
 ### Just for me (CMD):
 ```bash
-set JDK_VERSION=openJDK_v.11
-set MAVEN_VERSION=maven_v.3.6.3
+set JDK_VERSION=OpenJDK_v.11
+set MAVEN_VERSION=Maven_v.3.6.3
+set TOMCAT_VERSION=Tomcat_v.10.0.11
 set JAVA_HOME=%USERPROFILE%\OneDrive\Desctop\001_PROJECTS_\001_Java_Projects_\env\%JDK_VERSION%
 set MAVEN_HOME=%USERPROFILE%\OneDrive\Desctop\001_PROJECTS_\001_Java_Projects_\env\%MAVEN_VERSION%
+set CATALINA_HOME=%USERPROFILE%\OneDrive\Desctop\001_PROJECTS_\001_Java_Projects_\env\%TOMCAT_VERSION%
 set PATH=%PATH%;%JAVA_HOME%\bin
 set PATH=%PATH%;%MAVEN_HOME%\bin
+set PATH=%PATH%;%CATALINA_HOME%
 java -version
 mvn -v
+"%CATALINA_HOME%\bin\catalina.bat" start
+```
+
+### Tomcat's shutdown of the following command: 
+```bash
+"%CATALINA_HOME%\bin\catalina.bat" stop
 ```
 
 ### Just for me (PWSH):
 ```bash
-$env:JDK_VERSION="openJDK_v.11"
-$env:MAVEN_VERSION="maven_v.3.6.3"
+$env:JDK_VERSION="OpenJDK_v.11"
+$env:MAVEN_VERSION="Maven_v.3.6.3"
+$env:TOMCAT_VERSION="Tomcat_v.10.0.11"
 $env:JAVA_HOME="$env:USERPROFILE\OneDrive\Desctop\001_PROJECTS_\001_Java_Projects_\env\$env:JDK_VERSION"
 $env:MAVEN_HOME="$env:USERPROFILE\OneDrive\Desctop\001_PROJECTS_\001_Java_Projects_\env\$env:MAVEN_VERSION"
+$env:CATALINA_HOME="$env:USERPROFILE\OneDrive\Desctop\001_PROJECTS_\001_Java_Projects_\env\$env:TOMCAT_VERSION"
 $env:PATH="$env:PATH;$env:JAVA_HOME\bin"
 $env:PATH="$env:PATH;$env:MAVEN_HOME\bin"
+$env:PATH="$env:PATH;$env:CATALINA_HOME"
 java -version
 mvn --version
+& $env:CATALINA_HOME\bin\catalina.bat start
 ```
+
+### Tomcat's shutdown of the following command: 
+```bash
+& $env:CATALINA_HOME\bin\catalina.bat stop
+```
+
+### Just for me (*nix):
+```bash
+export JDK_VERSION="OpenJDK_v.11"
+export MAVEN_VERSION="Maven_v.3.6.3"
+export TOMCAT_VERSION="Tomcat_v.10.0.11"
+export JAVA_HOME="$HOME/Desctop/001_PROJECTS_/001_Java_Projects_/env/$JDK_VERSION"
+export M2_HOME="$HOME/Desctop/001_PROJECTS_/001_Java_Projects_/env/$MAVEN_VERSION"
+export CATALINA_HOME="$HOME/Desctop/001_PROJECTS_/001_Java_Projects_/env/$TOMCAT_VERSION"
+export PATH=$PATH:$JAVA_HOME/bin
+export PATH=$PATH:$M2_HOME/bin
+export PATH=$PATH:$CATALINA_HOME
+java -version
+mvn --version
+$CATALINA_HOME/bin/startup.sh start
+```
+
+### Tomcat's shutdown of the following command: 
+```bash
+$CATALINA_HOME/bin/catalina.sh stop
+```
+
 
 ---
 <br/>
