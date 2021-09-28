@@ -1,25 +1,26 @@
-# 001_JMaven_
+## [001_JMaven_][JMaven] > **Life Cycle**
 
 ## <p align=center>[Configuration][MavenCfg] | [New project][NewMvnPro] | [Compiling and Testing][ConmpTest]  <br/> [POM][MvnPOM] | [Life Cycle][LifeCycl] | [Build Profiles][BldProf] </p>
 
 <!--
+* [001_JMaven_][JMaven]
 * [Configuration][MavenCfg]
 * [New project][NewMvnPro]
 * [Compiling and Testing][ConmpTest]
 * [Project Object Model][MvnPOM] *(POM)*
 * [Life Cycle][LifeCycl]
 * [Build Profiles][BldProf]
-
 -->
 
-[MavenCfg]: res/read/Maven_Configuration.md
-[NewMvnPro]: res/read/Maven_NewProject.md
-[ConmpTest]: res/read/Maven_CompilationAndTesting.md
-[MvnPOM]: res/read/Maven_POM.md
-[LifeCycl]: res/read/Maven_Lifecycle.md
-[BldProf]: res/read/Maven_BuildProfile.md
+[JMaven]: ../../README.md
+[MavenCfg]: Maven_Configuration.md
+[NewMvnPro]: Maven_NewProject.md
+[ConmpTest]: Maven_CompilationAndTesting.md
+[MvnPOM]: Maven_POM.md
+[LifeCycl]: Maven_Lifecycle.md
+[BldProf]: Maven_BuildProfile.md
 
----
+--- 
 <br/>
 <!-- ---------------------------------- * Navigation * ---------------------------------- -->
 
@@ -90,6 +91,7 @@ $CATALINA_HOME/bin/startup.sh start
 ```bash
 $CATALINA_HOME/bin/catalina.sh stop
 ```
+
 
 ---
 <br/>

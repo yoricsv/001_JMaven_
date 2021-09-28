@@ -1,34 +1,97 @@
-# 001_JMaven_
+## [001_JMaven_][JMaven] > **New project**
 
 ## <p align=center>[Configuration][MavenCfg] | [New project][NewMvnPro] | [Compiling and Testing][ConmpTest]  <br/> [POM][MvnPOM] | [Life Cycle][LifeCycl] | [Build Profiles][BldProf] </p>
 
 <!--
+* [001_JMaven_][JMaven]
 * [Configuration][MavenCfg]
 * [New project][NewMvnPro]
 * [Compiling and Testing][ConmpTest]
 * [Project Object Model][MvnPOM] *(POM)*
 * [Life Cycle][LifeCycl]
 * [Build Profiles][BldProf]
-
 -->
 
-[MavenCfg]: res/read/Maven_Configuration.md
-[NewMvnPro]: res/read/Maven_NewProject.md
-[ConmpTest]: res/read/Maven_CompilationAndTesting.md
-[MvnPOM]: res/read/Maven_POM.md
-[LifeCycl]: res/read/Maven_Lifecycle.md
-[BldProf]: res/read/Maven_BuildProfile.md
+[JMaven]: ../../README.md
+[MavenCfg]: Maven_Configuration.md
+[NewMvnPro]: Maven_NewProject.md
+[ConmpTest]: Maven_CompilationAndTesting.md
+[MvnPOM]: Maven_POM.md
+[LifeCycl]: Maven_Lifecycle.md
+[BldProf]: Maven_BuildProfile.md
 
----
+--- 
 <br/>
 <!-- ---------------------------------- * Navigation * ---------------------------------- -->
 
 # <p align=center><b>Maven</b></p>
-Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information.
 
+
+
+
+```bash
+$ Apache Maven 3.8.2 (ea98e05a04480131370aa0c110b8c54cf726c06f)
+$ Maven home: /opt/apache-maven-3.8.2
+$ Java version: 1.8.0_45, vendor: Oracle Corporation
+$ Java home: /Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre
+$ Default locale: en_US, platform encoding: UTF-8
+$ OS name: "mac os x", version: "10.8.5", arch: "x86_64", family: "mac"
+```
+
+### **TIP:** For **Windows OS**
+1. Run the CommandPrompt `[Win]+[R]` -> Type: *`cmd`* -> `[Shift]+[Ctrl]+[Enter]` (to get admin rights)
+2. Check environment variable value e.g.
+
+```bash
+echo %JAVA_HOME%
+```
+3. If the response isn't something like this `D:\java\openjdk-11.0.x.x` 
+
+4. Add the path to JDK `\bin` folder to `PATH` and repeat the step 2. In other, go to step 5.
+
+### For Enterprise course (CMD):
+```bash
+set JAVA_HOME=D:\java\OpenJDK_v.11\openjdk-11.0.1.9
+set PATH=%PATH%;%JAVA_HOME%\bin
+java -version
+```
+
+### For Enterprise course (PWSH):
+```bash
+$env:JAVA_HOME="D:\java\OpenJDK_v.11\openjdk-11.0.1.9"
+$env:PATH="$env:PATH;$env:JAVA_HOME\bin"
+java -version
+```
+
+> ***NOTE***: Use the `/M` switch to make the setx command once to permanently create the system variable.
+
+5. Add the Maven `\bin` directory to `PATH`
+
+### For Enterprise course (CMD):
+```bash
+set MAVEN_HOME=D:\java\maven_v.3.6.3
+set PATH=%PATH%;%MAVEN_HOME%\bin
+```
+
+### For Enterprise course (PWSH):
+```bash
+$env:MAVEN_HOME="D:\java\maven_v.3.6.3"
+$env:PATH="$env:PATH;$env:MAVEN_HOME\bin"
+mvn -v
+```
+
+6. Confirm with `mvn -v` in a new shell. The result should look similar to:
+
+```bash
+Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+Maven home: C:\Users\Yoric\OneDrive\Desctop\001_PROJECTS_\001_Java_Projects_\env\maven_v.3.6.3\bin\..
+Java version: 15.0.1, vendor: AdoptOpenJDK, runtime: C:\Program Files\AdoptOpenJDK\jdk-15.0.1.9-hotspot
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
+```
 
 ---
-### Just for me Configuration (CMD):
+### Just for me (CMD):
 ```bash
 set JDK_VERSION=OpenJDK_v.11
 set MAVEN_VERSION=Maven_v.3.6.3
@@ -44,7 +107,7 @@ mvn -v
 "%CATALINA_HOME%\bin\catalina.bat" start
 ```
 
-#### *Tomcat shutdown following command:* 
+### Tomcat shutdown following command: 
 ```bash
 "%CATALINA_HOME%\bin\catalina.bat" stop
 ```
@@ -65,7 +128,7 @@ mvn --version
 & $env:CATALINA_HOME\bin\catalina.bat start
 ```
 
-#### *Tomcat shutdown following command:* 
+### Tomcat shutdown following command: 
 ```bash
 & $env:CATALINA_HOME\bin\catalina.bat stop
 ```
@@ -90,6 +153,7 @@ $CATALINA_HOME/bin/startup.sh start
 ```bash
 $CATALINA_HOME/bin/catalina.sh stop
 ```
+
 
 ---
 <br/>
