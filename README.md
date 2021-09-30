@@ -31,7 +31,7 @@ Apache Maven is a software project management and comprehension tool. Based on t
 
 # [*Only for me*][ForMe]:
 
-[ForMe]: res/img/OnlyForMe_Maven_Configuration.md
+[ForMe]: res/read/OnlyForMe_Maven_Configuration.md
 
 ### Via Command Prompt (CMD):
 ```bash
