@@ -20,12 +20,23 @@
 [LifeCycl]: Maven_Lifecycle.md
 [BldProf]: Maven_BuildProfile.md
 
---- 
 <br/>
 <!-- ---------------------------------- * Navigation * ---------------------------------- -->
 
-# <p align=center><b>Maven</b></p>
+# <p align=center><b>Maven Configuration</b></p>
 Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information.
+
+### CONTENTS:
+* [pom.xml][1]
+* [settings.xml][2]
+
+<!--
+* [pom.xml][]
+* [settings.xml][]
+-->
+
+[1]: https://maven.apache.org/pom.html
+[2]: https://maven.apache.org/settings.html
 
 
 ---

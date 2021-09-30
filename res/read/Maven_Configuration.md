@@ -24,9 +24,24 @@
 <br/>
 <!-- ---------------------------------- * Navigation * ---------------------------------- -->
 
-# <p align=center><b>Download and Configuration</b></p>
+# <p align=center><b>Maven Download and Configuration</b></p>
 
-## Download and Configuration
+## CONTENTS:
+* Download and Installing
+* Configuration
+  * [pom.xml][1]
+  * [settings.xml][2]
+  * **Maven CLI Commands**:
+    * command structure
+    * Simple stuff
+    * ARTIFACTS
+    * RELEASING
+    * TOMCAT PLUGIN
+
+---
+<br/>
+
+## Download and Installing
 1. **Before** installing Apache-Maven, you need to download and install the JDK from the official Oracle website *(Use the following [Java SE Download][loadJDK] link)*.
 2. Click the [Download Mavan][loadMvn] link to go to the official Apache website and get the latest version. 
 3. Extract distribution archives in any directories *(use your preferred archive extraction tool)*.
@@ -184,11 +199,78 @@ $CATALINA_HOME/bin/catalina.sh stop
 ---
 <br/>
 
+# <p align=center><b>Configuration</b></p>
+
+## Maven CLI Commands
+
+### General command structure
+```bash
+mvn -P<profile> <command> <scope>
+```
+
+### Simple stuff
+```bash
+mvn help
+mvn compile
+mvn validate
+mvn verify
+mvn test
+mvn clean 
+mvn clean package
+mvn clean install
+mvn clean deploy
+```
+
+### ARTIFACTS
+```bash
+mvn archetype:create                                # Create pom.xml
+
+mvn archetype:create                                # Create JAR
+    -DgroupId=<group> \
+    -DartifactId=<new id>
+
+mvn archetype:create                                # Create WAR
+    -DgroupId=<group>     \
+    -DartifactId=<new id> \
+    -DarchetypeArtifactId=maven-archetype-webapp
+
+mvn install:install-file <params>                   # Install dependencies
+```
+
+### RELEASING
+```bash
+mvn deploy:deploy-file <params ...>
+
+# Useful release options:
+#   -P <profile>
+#   -Dusername=<user>
+#   -Dpassword=<password>
+
+mvn release:prepare
+mvn release:clean
+mvn release:perform
+```
+
+### TOMCAT PLUGIN
+```bash
+mvn tomcat:deploy
+mvn tomcat:redeploy
+mvn tomcat:undeploy
+mvn tomcat:stop
+mvn tomcat:start
+```
 
 <!--
 * [Download JDK][loadJDK]
 * [Download Maven][loadMvn]
+* [pom.xml][1]
+* [settings.xml][2]
 -->
 
 [loadJDK]: https://www.oracle.com/javadownload
 [loadMvn]: https://maven.apache.org/download.cgi
+[1]: https://maven.apache.org/pom.html
+[2]: https://maven.apache.org/settings.html
+
+---
+<br/>
