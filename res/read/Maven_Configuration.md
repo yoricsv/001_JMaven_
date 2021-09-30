@@ -20,7 +20,6 @@
 [LifeCycl]: Maven_Lifecycle.md
 [BldProf]: Maven_BuildProfile.md
 
-<br/>
 <!-- ---------------------------------- * Navigation * ---------------------------------- -->
 
 # <p align=center><b>Installing and Configuring</b></p>

@@ -1,6 +1,6 @@
 ## [001_JMaven_][JMaven] > **Maven Configuration** *(Only for me)*
 
-## <p align=center>[Configuration][MavenCfg] | [New project][NewMvnPro] | [Compiling and Testing][ConmpTest]  <br/> [POM][MvnPOM] | [Life Cycle][LifeCycl] | [Build Profiles][BldProf] </p>
+## <p align=center>[Configuration][MavenCfg] | [New project][NewMvnPro] | [Compiling and Testing][ConmpTest]  <br/> [POM][MvnPOM] | [Lifecycle][LifeCycl] | [Build Profiles][BldProf] </p>
 
 <!--
 * [001_JMaven_][JMaven]
@@ -8,7 +8,7 @@
 * [New project][NewMvnPro]
 * [Compiling and Testing][ConmpTest]
 * [Project Object Model][MvnPOM] *(POM)*
-* [Life Cycle][LifeCycl]
+* [Lifecycle][LifeCycl]
 * [Build Profiles][BldProf]
 -->
 
@@ -20,12 +20,9 @@
 [LifeCycl]: Maven_Lifecycle.md
 [BldProf]: Maven_BuildProfile.md
 
---- 
-<br/>
 <!-- ---------------------------------- * Navigation * ---------------------------------- -->
 
 # <p align=center><b>Maven Configuration</b> <i>(Only for me)</i></p>
-
 
 ### Via Command Prompt (CMD):
 ```bash
