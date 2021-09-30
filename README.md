@@ -34,7 +34,6 @@ Apache Maven is a software project management and comprehension tool. Based on t
 * [Lifecycle][LifeCycl]
 * [Build Profiles][BldProf]
 
-
 ### Cheat-Sheets:
 * [MarkDown][md]
 * [Git Commands][gitComm]
