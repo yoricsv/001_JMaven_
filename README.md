@@ -19,7 +19,6 @@
 [LifeCycl]: res/read/Maven_Lifecycle.md
 [BldProf]: res/read/Maven_BuildProfile.md
 
-
 <br/>
 <!-- ---------------------------------- * Navigation * ---------------------------------- -->
 
