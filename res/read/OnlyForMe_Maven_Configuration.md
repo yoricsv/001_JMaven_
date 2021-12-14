@@ -25,6 +25,7 @@
 # <p align=center><b>Maven Configuration</b> <i>(Only for me)</i></p>
 
 ### Via Command Prompt (CMD):
+
 ```bash
 set JDK_VERSION=OpenJDK_v.11
 set MAVEN_VERSION=Maven_v.3.6.3
@@ -41,17 +42,35 @@ mvn -v
 ```
 
 #### *Tomcat shutdown following command:* 
+
 ```bash
 "%CATALINA_HOME%\bin\catalina.bat" stop
 ```
 
 ### To see all system Enviroment Variables (PWSH):
+
 > NOTE: `dir` and `gci` are both *aliases* for `Get-ChildItem`
 ```bash
 dir env:
 ```
 
 ### Via PowerShell (PWSH):
+
+```bash
+$env:JDK_VERSION="OpenJDK_v.11"
+$env:MAVEN_VERSION="Maven_v.3.6.3"
+$env:TOMCAT_VERSION="Tomcat_v.9.0.53"
+$env:JAVA_HOME="$env:OneDrive\Desktop\001_PROJECTS_\001_Java_Projects_\env\$env:JDK_VERSION"
+$env:M2_HOME="$env:OneDrive\Desktop\001_PROJECTS_\001_Java_Projects_\env\$env:MAVEN_VERSION"
+$env:CATALINA_HOME="$env:OneDrive\Desktop\001_PROJECTS_\001_Java_Projects_\env\$env:TOMCAT_VERSION"
+$env:PATH="$env:PATH;$env:JAVA_HOME\bin"
+$env:PATH="$env:PATH;$env:M2_HOME\bin"
+$env:PATH="$env:PATH;$env:CATALINA_HOME"
+java -version
+mvn --version
+& $env:CATALINA_HOME\bin\catalina.bat start
+```
+
 ```bash
 $env:JDK_VERSION="OpenJDK_v.11"
 $env:MAVEN_VERSION="Maven_v.3.6.3"
@@ -68,11 +87,13 @@ mvn --version
 ```
 
 #### *Tomcat shutdown following command:* 
+
 ```bash
 & $env:CATALINA_HOME\bin\catalina.bat stop
 ```
 
 ### Via Terminal (*nix):
+
 ```bash
 export JDK_VERSION="OpenJDK_v.11"
 export MAVEN_VERSION="Maven_v.3.6.3"
@@ -89,9 +110,9 @@ $CATALINA_HOME/bin/startup.sh start
 ```
 
 #### *Tomcat shutdown following command:* 
+
 ```bash
 $CATALINA_HOME/bin/catalina.sh stop
 ```
 
 ---
-<br/>
