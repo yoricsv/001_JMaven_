@@ -1,4 +1,4 @@
-## [001_JMaven_][JMaven] > **Maven Configuration** *(Only for me)*
+# [001_JMaven_][JMaven] > **Maven Configuration** *(Only for me)*
 
 ## <p align=center>[Configuration][MavenCfg] | [New project][NewMvnPro] | [Compiling and Testing][ConmpTest]  <br/> [POM][MvnPOM] | [Lifecycle][LifeCycl] | [Build Profiles][BldProf] </p>
 
@@ -24,7 +24,20 @@
 
 # <p align=center><b>Maven Configuration</b> <i>(Only for me)</i></p>
 
-### Via Command Prompt (CMD):
+## Via Command Prompt (CMD):
+
+### To see all system Enviroment Variables (CMD):
+
+> NOTE: to get full list have to `set` for special variable use `echo %_env_name_%`
+```bash
+set
+```
+
+or
+
+```bash
+echo %PATH%
+```
 
 ```bash
 set JDK_VERSION=OpenJDK_v.11
@@ -47,14 +60,14 @@ mvn -v
 "%CATALINA_HOME%\bin\catalina.bat" stop
 ```
 
+## Via PowerShell (PWSH):
+
 ### To see all system Enviroment Variables (PWSH):
 
 > NOTE: `dir` and `gci` are both *aliases* for `Get-ChildItem`
 ```bash
 dir env:
 ```
-
-### Via PowerShell (PWSH):
 
 ```bash
 $env:JDK_VERSION="OpenJDK_v.11"
@@ -92,7 +105,7 @@ mvn --version
 & $env:CATALINA_HOME\bin\catalina.bat stop
 ```
 
-### Via Terminal (*nix):
+## Via Terminal (*nix):
 
 ```bash
 export JDK_VERSION="OpenJDK_v.11"
@@ -109,7 +122,7 @@ mvn --version
 $CATALINA_HOME/bin/startup.sh start
 ```
 
-#### *Tomcat shutdown following command:* 
+### *Tomcat shutdown following command:* 
 
 ```bash
 $CATALINA_HOME/bin/catalina.sh stop
